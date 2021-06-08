@@ -1,0 +1,34 @@
+.routinesDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.routineItem{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.routineItem:hover{
+    box-shadow: 4px 4px 4px black;
+}
+
+.activityList{
+    padding: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+.activity{
+    border-top: 2px solid black;
+}

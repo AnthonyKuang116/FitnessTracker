@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(43, 132, 161);
+}
+
+.loginSubmit, .registerSubmit{
+    font-weight: bold;
+}
+
+.loginSubmit:hover, .registerSubmit:hover{
+    color: green;
+    box-shadow: 3px 3px 3px black;
+}
+
+.signOut {
+    box-shadow: 2px 2px 3px black;
+}
+
+.signOut:hover{
+    box-shadow: 3px 3px 10px black;
+    color: rgb(180, 23, 23);
+}

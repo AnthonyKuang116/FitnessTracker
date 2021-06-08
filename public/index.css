@@ -1,0 +1,31 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 200px 50px 1fr;
+  grid-gap: 8px;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #444;
+}
+
+header{
+    grid-row: 3;
+}

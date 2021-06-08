@@ -1,0 +1,10 @@
+.nav{
+    text-decoration: none;
+}
+.nav:hover {
+    text-decoration: underline;
+}
+
+.mainHeader {
+    font-family: cursive;
+}

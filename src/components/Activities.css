@@ -1,0 +1,56 @@
+.activityItem {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.activityItem:hover{
+  box-shadow: 5px 5px 5px black;
+}
+
+.newActivity {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.newActivityForm {
+  margin-left: 35px;
+  max-width: 500px;
+  text-align: left;
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.newActivityForm:hover{
+  box-shadow: 5px 5px 5px black;
+}
+
+.newActivityForm button {
+  padding: 5px;
+}
+
+.activitiesSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.newActivity button:hover {
+  box-shadow: 4px 4px 4px gray;
+  color: green;
+}
