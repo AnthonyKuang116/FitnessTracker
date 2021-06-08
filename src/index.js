@@ -20,8 +20,7 @@ import {
     MyRoutines
 } from './components';
 
-
-
+//Main App
 const App = () => {
     const [currentUser, setCurrentUser] = useState(getCurrentUser);
     const [routinesList, setRoutinesList] = useState([]);
@@ -55,16 +54,16 @@ const App = () => {
                 setCurrentUser={setCurrentUser} />
             <Router>
                 <div id="navLinks">
-                    <NavLink to="/" className="nav" style={{padding: "5px", borderRadius: "5px", marginLeft: "10px", fontWeight: "bold"}}>Home</NavLink>
-                    <NavLink to="/routines" className="nav" style={{padding: "5px", borderRadius: "5px", fontWeight: "bold"}}>Routines</NavLink>
-                    <NavLink to="/activities" className="nav" style={{padding: "5px", borderRadius: "5px", fontWeight: "bold"}}>Activities</NavLink>
+                    <NavLink to="/" className="nav" style={{ padding: "5px", borderRadius: "5px", marginLeft: "10px", fontWeight: "bold" }}>Home</NavLink>
+                    <NavLink to="/routines" className="nav" style={{ padding: "5px", borderRadius: "5px", fontWeight: "bold" }}>Routines</NavLink>
+                    <NavLink to="/activities" className="nav" style={{ padding: "5px", borderRadius: "5px", fontWeight: "bold" }}>Activities</NavLink>
                     {token ?
-                        <NavLink to="/my-routines" className="nav" style={{padding: "5px", borderRadius: "5px", fontWeight: "bold"}}>My Routines</NavLink>
+                        <NavLink to="/my-routines" className="nav" style={{ padding: "5px", borderRadius: "5px", fontWeight: "bold" }}>My Routines</NavLink>
                         : ''}
                     <Switch>
                         {token ?
                             <Route path="/my-routines">
-                                <MyRoutines 
+                                <MyRoutines
                                     currentUser={currentUser}
                                     token={token}
                                     routinesList={routinesList}
@@ -75,19 +74,19 @@ const App = () => {
                                 />
                             </Route>
                             : ""}
-                            <Route exact path="/routines"><Routines routinesList={routinesList}/></Route>
-                            <Route exact path="/activities"><Activities activitiesList={activitiesList} setActivitiesList={setActivitiesList} token={token}/></Route>
-                
-                            <Redirect to="/"/>
+                        <Route exact path="/routines"><Routines routinesList={routinesList} /></Route>
+                        <Route exact path="/activities"><Activities activitiesList={activitiesList} setActivitiesList={setActivitiesList} token={token} /></Route>
+
+                        <Redirect to="/" />
                     </Switch>
                 </div>
-            </Router>      
+            </Router>
         </div>
     )
 }
 
 
 ReactDOM.render(
-            <App />,
+    <App />,
     document.getElementById('app')
 );

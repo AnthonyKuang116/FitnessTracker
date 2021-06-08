@@ -61,14 +61,14 @@ const Activities = ({ activitiesList, setActivitiesList, token }) => {
                                 onChange={(event) => {
                                     setDescription(event.target.value)
                                 }} />
-                            <button type="submit" className="actBtn" style={{ marginTop: "5px"}}>Add Activity</button>
+                            <button type="submit" className="actBtn" style={{ marginTop: "5px" }}>Add Activity</button>
                         </form>
                         : ''
                     }
-                    {message ? <p style={{ color: "red", fontWeight: "bold", marginLeft: "35px", marginTop: "5px"}}>{message}</p> : ''}
+                    {message ? <p style={{ color: "red", fontWeight: "bold", marginLeft: "35px", marginTop: "5px" }}>{message}</p> : ''}
                 </div>
             </div>
-            
+
             <div className="activitiesSection">
                 {
                     activitiesList.map((activity) => {

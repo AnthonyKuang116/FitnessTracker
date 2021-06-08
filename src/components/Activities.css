@@ -1,24 +1,24 @@
 .activityItem {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 250px;
-    margin: 5px;
-    padding: 10px;
-    box-shadow: 2px 2px 2px gray;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 250px;
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px gray;
 }
 
-.activityItem:hover{
+.activityItem:hover {
   box-shadow: 5px 5px 5px black;
 }
 
 .newActivity {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 5px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 5px;
+  padding: 10px;
 }
 
 .newActivityForm {
@@ -33,7 +33,7 @@
   box-shadow: 3px 3px 3px gray;
 }
 
-.newActivityForm:hover{
+.newActivityForm:hover {
   box-shadow: 5px 5px 5px black;
 }
 
@@ -42,12 +42,12 @@
 }
 
 .activitiesSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 5px;
-    height: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  height: 10px;
 }
 
 .newActivity button:hover {

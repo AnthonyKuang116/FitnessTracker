@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { addActivity } from '../api'
 
-const AddActivity = ({activitiesList, routineIdtoAddActivity, token}) => {
-    const [activityId, setActivityId] = useState(1)
-    const [activityName, setActivityName] = useState('')
-    const [descriptionName, setDescriptionName] = useState('')
-    const [message, setMessage] = useState('')
-    const [count, setCount] = useState(0)
-    const [duration, setDuration] = useState(0)
+//Form for adding activities to your routine
+const AddActivity = ({ activitiesList, routineIdtoAddActivity, token }) => {
+    const [activityId, setActivityId] = useState(1);
+    const [activityName, setActivityName] = useState('');
+    const [descriptionName, setDescriptionName] = useState('');
+    const [message, setMessage] = useState('');
+    const [count, setCount] = useState(0);
+    const [duration, setDuration] = useState(0);
 
     const handleSubmit = async (event) => {
-        event.preventDefault()
-        const activitySelect = await addActivity( token, routineIdtoAddActivity, activityId, count, duration)
+        event.preventDefault();
+        const activitySelect = await addActivity(token, routineIdtoAddActivity, activityId, count, duration)
         if (activitySelect.error) {
             setMessage("Unable to perform action due to it being a duplicate")
         } else {
@@ -35,7 +36,7 @@ const AddActivity = ({activitiesList, routineIdtoAddActivity, token}) => {
             <h4 className="activityFormTitle">Add an Activity</h4>
             <form onSubmit={handleSubmit}>
                 <p>(Choose an activity)</p>
-                <select onChange={handleSelectChange} className="option" style={{width: "232px"}}>
+                <select onChange={handleSelectChange} className="option" style={{ width: "232px" }}>
                     {
                         activitiesList.map(activity => (
                             <option key={activity.id} value={activity.id}>
